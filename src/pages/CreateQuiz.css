@@ -1,0 +1,96 @@
+.create-quiz-page {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.create-quiz-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.quiz-info-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.textarea-field {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.select-field {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2394a3b8' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+}
+
+.questions-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.question-editor-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    border-left: 4px solid var(--color-primary);
+}
+
+.question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delete-btn {
+    color: #ef4444;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+}
+
+.answers-editor {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+
+.answer-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.answer-row input[type="radio"] {
+    width: 1.25rem;
+    height: 1.25rem;
+    accent-color: var(--color-primary);
+    cursor: pointer;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    bottom: var(--spacing-md);
+    background-color: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(8px);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 40;
+}

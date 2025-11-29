@@ -1,0 +1,121 @@
+.membership-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    align-items: start;
+}
+
+.pricing-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pricing-card.popular {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-primary);
+    color: white;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow: var(--shadow-md);
+}
+
+.tier-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.tier-header h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.price {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 2px;
+}
+
+.amount {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.period {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+}
+
+.description {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+}
+
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    flex-grow: 1;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    font-size: 0.95rem;
+}
+
+.feature-item.excluded {
+    color: var(--color-text-muted);
+    opacity: 0.6;
+}
+
+.check-icon {
+    color: #22c55e;
+    flex-shrink: 0;
+}
+
+.times-icon {
+    color: var(--color-text-muted);
+    flex-shrink: 0;
+    font-size: 0.875rem;
+}
+
+.w-full {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .pricing-card.popular {
+        transform: none;
+    }
+}

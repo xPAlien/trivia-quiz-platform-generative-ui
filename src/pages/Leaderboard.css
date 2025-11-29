@@ -1,0 +1,194 @@
+.leaderboard-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.leaderboard-controls {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    background: rgba(15, 23, 42, 0.6);
+    padding: var(--spacing-xs);
+    border-radius: var(--radius-full);
+    width: fit-content;
+    margin: 0 auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+}
+
+.control-btn {
+    padding: var(--spacing-sm) var(--spacing-xl);
+    border-radius: var(--radius-full);
+    color: var(--color-text-muted);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.control-btn.active {
+    background: var(--color-primary);
+    color: white;
+    box-shadow: 0 0 15px var(--color-primary-glow);
+}
+
+.leaderboard-card {
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.leaderboard-table-header {
+    display: grid;
+    grid-template-columns: 100px 1fr 120px 120px;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--color-text-dim);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.leaderboard-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.leaderboard-row {
+    display: grid;
+    grid-template-columns: 100px 1fr 120px 120px;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.2s ease;
+}
+
+.leaderboard-row:last-child {
+    border-bottom: none;
+}
+
+.leaderboard-row:hover {
+    background: rgba(255, 255, 255, 0.03);
+    transform: scale(1.005);
+}
+
+.top-rank {
+    background: linear-gradient(90deg, rgba(99, 102, 241, 0.08) 0%, transparent 100%);
+    border-left: 2px solid var(--color-primary);
+}
+
+.col-rank {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+}
+
+.rank-icon {
+    font-size: 1.75rem;
+    filter: drop-shadow(0 0 5px currentColor);
+}
+
+.rank-icon.gold {
+    color: #fbbf24;
+}
+
+.rank-icon.silver {
+    color: #e2e8f0;
+}
+
+.rank-icon.bronze {
+    color: #b45309;
+}
+
+.rank-number {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    font-size: 0.9rem;
+}
+
+.col-player {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.player-avatar {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-surface-hover) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.player-name {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: white;
+}
+
+.status-badge {
+    background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    margin-left: var(--spacing-sm);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 5px rgba(251, 191, 36, 0.3);
+}
+
+.col-quizzes {
+    color: var(--color-text-muted);
+    text-align: center;
+    font-weight: 500;
+}
+
+.col-score {
+    font-weight: 800;
+    color: var(--color-primary);
+    text-align: right;
+    font-size: 1.25rem;
+    text-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+}
+
+@media (max-width: 768px) {
+
+    .leaderboard-table-header,
+    .leaderboard-row {
+        grid-template-columns: 60px 1fr 80px;
+        padding: var(--spacing-md);
+    }
+
+    .col-quizzes {
+        display: none;
+    }
+
+    .player-avatar {
+        width: 36px;
+        height: 36px;
+        font-size: 1.2rem;
+    }
+}

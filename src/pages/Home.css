@@ -1,0 +1,206 @@
+.home-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2xl);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated Background Blobs */
+.home-page::before,
+.home-page::after {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -1;
+    opacity: 0.4;
+    animation: float 10s ease-in-out infinite;
+}
+
+.home-page::before {
+    background: var(--color-primary);
+    top: -100px;
+    left: -100px;
+}
+
+.home-page::after {
+    background: var(--color-secondary);
+    bottom: -100px;
+    right: -100px;
+    animation-delay: -5s;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    padding: 6rem 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    text-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    max-width: 700px;
+    font-weight: 300;
+}
+
+.hero-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-xl);
+}
+
+/* Featured Section */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.view-all-link {
+    color: var(--color-primary);
+    font-weight: 600;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.view-all-link:hover {
+    color: #818cf8;
+    transform: translateX(4px);
+}
+
+.quiz-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.quiz-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.quiz-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+    transition: transform 0.4s ease;
+}
+
+.quiz-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.quiz-description {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.quiz-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--color-text-dim);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: var(--spacing-md);
+}
+
+/* CTA Section */
+.cta-section {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.cta-card {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+    border-radius: var(--radius-2xl);
+    padding: 4rem;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(99, 102, 241, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.cta-content p {
+    color: var(--color-text-muted);
+    font-size: 1.25rem;
+    max-width: 600px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions a,
+    .hero-actions button {
+        width: 100%;
+    }
+
+    .cta-card {
+        padding: 2rem;
+    }
+}

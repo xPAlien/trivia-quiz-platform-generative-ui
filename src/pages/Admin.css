@@ -1,0 +1,149 @@
+.admin-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.admin-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.admin-stat-card {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.stat-icon {
+    font-size: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    width: 70px;
+    height: 70px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.stat-label {
+    color: var(--color-text-muted);
+}
+
+.admin-content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.report-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.report-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md);
+    background-color: rgba(255, 255, 255, 0.02);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.report-details h4 {
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.report-details p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin-bottom: 4px;
+}
+
+.report-reason {
+    font-size: 0.85rem;
+    color: #ef4444;
+    font-weight: 500;
+}
+
+.report-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.action-btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+.health-metrics {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-md);
+}
+
+.metric-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.metric-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+
+.metric-value.ok {
+    color: #22c55e;
+}
+
+.metric-value.warn {
+    color: #fbbf24;
+}
+
+.metric-value.crit {
+    color: #ef4444;
+}
+
+.metric-bar {
+    width: 100%;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.metric-fill {
+    height: 100%;
+    border-radius: var(--radius-full);
+}
+
+@media (max-width: 1024px) {
+    .admin-content-grid {
+        grid-template-columns: 1fr;
+    }
+}
